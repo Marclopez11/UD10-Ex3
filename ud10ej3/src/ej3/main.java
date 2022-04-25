@@ -7,26 +7,16 @@ public class main {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		
+		// TODO Auto-generated method stu
+		int naleatorio = 0;
+		GenerarNumero gnumero = new GenerarNumero();
 
 		try {
-			System.out.println("Generando número aleatiorio... ");
-			int numeroAleatorio;
-			numeroAleatorio = (int) Math.floor(Math.random() * (1 - 900 + 1) + 900);
-			System.out.println("El numero aleatorio generado es: "+numeroAleatorio);
+			System.out.println("Generando numero aleatorio...");
+			 naleatorio = gnumero.generarNumero();
+			System.out.println("El numero aleatorio generado es: "+gnumero.getNumeroAleatorio());
 
-			
-			// resuelve codigo con excepcion
-			
-			
-
-			if (numeroAleatorio % 2 == 0) {
-				throw new MiException(1);
-			} else  {
-				throw new MiException(2);
-			}
+			gnumero.comprobarNumero(naleatorio);
 
 		} catch (MiException e) {
 			System.out.println(e.getMessage());
